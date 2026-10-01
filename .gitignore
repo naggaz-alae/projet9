@@ -1,0 +1,11 @@
+# Base de données locale et configuration propre à chaque installation
+var/*
+!var/.gitkeep
+!var/.htaccess
+config/config.local.php
+
+# Éditeurs et système
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

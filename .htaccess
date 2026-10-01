@@ -1,0 +1,10 @@
+# Hébergement où l'on ne peut pas choisir public/ comme racine du site :
+# toutes les requêtes sont redirigées vers public/. Les dossiers src/, config/,
+# database/ et var/ (base SQLite) ne sont donc jamais accessibles depuis le web.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(?!public/)(.*)$ public/$1 [L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+    Require all denied
+</IfModule>
